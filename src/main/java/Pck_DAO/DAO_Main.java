@@ -1,4 +1,4 @@
-package PCK_DAO;
+package Pck_DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,11 +8,11 @@ public class DAO_Main {
     private Connection conexao;
 
     public Connection getConexao() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver"); // para MySQL 8+
-            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/mvc_banco", "root", "");
+        try {// para MySQL 8+
+            Class.forName("com.mysql.cj.jdbc.Driver"); // Driver
+            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/mvc_banco", "root", "");//URL | Login | Senha
         } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
         return conexao;
     }
@@ -23,7 +23,7 @@ public class DAO_Main {
                 conexao.close();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
     }
 }

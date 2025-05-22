@@ -1,4 +1,4 @@
-package PCK_Model;
+package Pck_Model;
 
 public class Model_Cliente {
 
@@ -17,10 +17,10 @@ public class Model_Cliente {
         this.setA01_cpf(cliente_cpf);
         this.setA01_credito(cliente_credito);
     }
+
     public int getA01_codigo() {
         return a01_codigo;
     }
-
     public String getA01_nome() {
         return a01_nome;
     }
@@ -37,6 +37,8 @@ public class Model_Cliente {
     public float getA01_credito() {
         return a01_credito;
     }
+
+
     public void setA01_codigo(int a01_codigo) {
         this.a01_codigo = a01_codigo;
     }

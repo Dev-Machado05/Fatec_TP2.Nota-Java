@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" th:href="@{/css/index.css}">
+  <link rel="stylesheet" th:href="@{/css/index.css}"> 
+   <!-- <link rel="stylesheet" href="../static/css/index.css"> -->
   <title>Document</title>
 </head>
   <body>
     <main>
-      <div>
-        <form action="/paraCliente" method="post">
-          <button type="submit">test1</button>
+      <section class="index">
+        <form action="/pagCliente" method="post">
+          <button type="submit">Clientes</button>
         </form>
-        <form action="/paraCarrinho" method="post">
-          <button type="submit">test2</button>
+        <form action="/pagCarrinho" method="post">
+          <button type="submit">Carrinho</button>
         </form>
-        <form action="/paraEstoque" method="post">
-          <button type="submit">test3</button>
+        <form action="/pagVitrine" method="post">
+          <button type="submit">Vitrine</button>
         </form>
-      </div>
+      </section>
     </main>
   </body>
 </html>

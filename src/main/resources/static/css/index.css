@@ -14,20 +14,19 @@ main {
   background-color: rgba(255, 9, 9, 0.356);
 }
 
-div {
+section {
   display: flex;
-  min-width: 30vw;
-  max-width: 70vw;
   width: max-content;
   height: 25vw;
-   
-  gap: 10vw;
+  min-width: 30vw;
+  max-width: 70vw;
   padding: 10vw;
+  gap: 10vw;
 }
 
 button{
-  height: 15vw;
   width: 10vw;
+  height: 15vw;
   justify-self: center;
   align-self: center;
   font-size: 2rem;

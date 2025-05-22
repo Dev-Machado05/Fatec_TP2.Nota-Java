@@ -3,7 +3,6 @@ package Pck_Control;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class Control_Main {
@@ -13,21 +12,21 @@ public class Control_Main {
         return "index";
     }
 
-    @PostMapping("/paraCliente")
+    @PostMapping("/pagCliente")
     public String RedirectClient() {
         // local para implementação de lógica
         return "redirect:/cliente";
     }
 
-    @PostMapping("/paraCarrinho")
+    @PostMapping("/pagCarrinho")
     public String RedirectCarrinho() {
         // local para implementação de lógica
         return "redirect:/carrinho";
     }
 
-    @PostMapping("/paraEstoque")
-    public String RedirectEstoque() {
+    @PostMapping("/pagVitrine")
+    public String RedirectVitrine() {
         // local para implementação de lógica
-        return "redirect:/estoque";
+        return "redirect:/vitrine";
     }
 }

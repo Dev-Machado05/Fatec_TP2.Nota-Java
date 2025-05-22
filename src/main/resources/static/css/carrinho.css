@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: #007185;
+}
+
+header { 
+    display: flex;
+    background: #232f3e; 
+    padding: 1em; 
+    justify-content: space-between;
+}
+header .titulo { 
+    color: #fff; 
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+.returnHeader {
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: lightgrey;
+}
+
+.returnHeader:hover {
+    color: white;
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em;
+}
+
+.main {
+    flex: 2;
+    background: #fff;
+    padding: 1.5em;
+    margin-right: 1em;
+    border-radius: 4px;
+}
+
+.side {
+    flex: 1;
+    background: #fff;
+    padding: 1.5em;
+    border-radius: 4px;
+}
+
+.section {
+    margin-bottom: 2em;
+}
+
+.section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+.field-group {
+    margin-bottom: 1em;
+}
+
+.field-group label {
+    display: block;
+    margin-bottom: 0.3em;
+    font-size: 0.9rem;
+}
+
+.field-group input,
+.field-group select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+button.primary {
+    width: 100%;
+    background-color: rgb(255, 88, 88);
+    border: 2px solid;
+    padding: 0.7em 1.2em;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-top: 22em;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8em;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1em;
+}
+
+table {
+   border-collapse: collapse;
+}
+
+th, tr {
+  border-top: 1px solid;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding: 1em;
+  padding-left: 0.1em;
+}
+tr:nth-child(1) th, tr:nth-child(1) {
+  border-top: none;
+}

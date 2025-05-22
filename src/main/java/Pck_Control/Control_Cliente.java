@@ -2,7 +2,8 @@ package Pck_Control;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -11,6 +12,29 @@ public class Control_Cliente {
     @GetMapping("/cliente")
     public String controlCliente() {
         return "cliente";
+    }
+
+    @PostMapping("/setClient")
+    public String ClientDTO(@RequestParam String CPF, @RequestParam String name, @RequestParam String address, @RequestParam String phone, @RequestParam String mail) {
+        if (validacaoInputCli(CPF, name, address, phone, mail)) {
+            return "cliente";
+        }
+        else {
+            return "cliente";
+        }
+    }
+
+    @PostMapping("/returnMain")
+    public String returnIndex() {
+        return "redirect:/";
+    }
+
+    public boolean validacaoInputCli(String cpf, String name, String address, String phone, String mail) {
+        return cpf != null && !cpf.isEmpty() &&
+               name != null && !name.isEmpty() &&
+               address != null && !address.isEmpty() &&
+               phone != null && !phone.isEmpty() &&
+               mail != null && !mail.isEmpty();
     }
 }
 
