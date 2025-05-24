@@ -1,5 +1,6 @@
 package Pck_Control;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 //import model_cliente
@@ -43,96 +44,131 @@ public class Control_Cliente {
                 
                 case "remove":
                 if (validateInputCli(action, rqCPF, rqName, rqAddress, rqPhone, rqMail)) {
-                    System.out.println("");
+                    removeClient();
                 } else {
                     model.addAttribute("erroMsg", true);
                 }
                 return "cliente";
+
 
             case "update":
                 if (validateInputCli(action, rqCPF, rqName, rqAddress, rqPhone, rqMail)) {
-                    System.out.println("adicionar função de update aqui");
+                    updateClient();
+
                 } else {
                     model.addAttribute("erroMsg", true);
                 }
 
                 return "cliente";
-                
+
+
                 case "insert":
                 if (validateInputCli(action, rqCPF, rqName, rqAddress, rqPhone, rqMail)) {
+
+                    insertClient(); // função para adicionar cliente
+
                     model.addAttribute("sucessMsg", true);
-                    //        arrayCliente client = new arrayCliente();
+                    /* arrayCliente client = new arrayCliente();
                     
-                    //                    client.setCpf(rqCPF);
-                    //                  client.setName(rqName);
-                    //                client.setAddress(rqAddress);
-                    //              client.setPhone(rqPhone);
-                    //            client.setMail(rqMail);
-                    //
-                    //                  clientList.add(client);
-                    
-     //               model.addAttribute("clientList", clientList);
+                    client.setCpf(rqCPF);
+                    client.setName(rqName);
+                    client.setAddress(rqAddress);
+                    client.setPhone(rqPhone);
+                    client.setMail(rqMail);
+
+                    clientList.add(client);
+
+                    model.addAttribute("clientList", clientList); */
+
                 model.addAttribute("sucessMsg", true);
                 } else {
                     model.addAttribute("erroMsg", true);
                 }
                 return "cliente";
 
+
             case "consult":
                 if (validateInputCli(action, rqCPF, rqName, rqAddress, rqPhone, rqMail)) {
-                    System.out.println("adicionar função de consulta aqui");
+                    int[] clientData = consultClient();
+
                 } else {
                     model.addAttribute("erroMsg", true);
                 }
-            
+
+
             default:
                 System.out.println("Ação de botão incorreta.");
             }
             return "cliente";
         }
-       // else {
-       //     model.addAttribute("erroMsg", true);
-       //     
+       /* else {
+            model.addAttribute("erroMsg", true);
+        }
         
-        // if (validateInputCli(rqCPF, rqName, rqAddress, rqPhone, rqMail)) {
-        //    model.addAttribute("sucessMsg", true);
-        //}
-        //else {
-        //    model.addAttribute("erroMsg", true);
-        //    model.addAttribute("cpf", rqCPF);
-        //    model.addAttribute("name", rqName);
-        //    model.addAttribute("address", rqAddress);
-        //    model.addAttribute("phone", rqPhone);
-        //    model.addAttribute("main", rqMail);
-        //}
-        //return "cliente";
+         if (validateInputCli(rqCPF, rqName, rqAddress, rqPhone, rqMail)) {
+            model.addAttribute("sucessMsg", true);
+        }
+        else {
+            model.addAttribute("erroMsg", true);
+            model.addAttribute("cpf", rqCPF);
+            model.addAttribute("name", rqName);
+            model.addAttribute("address", rqAddress);
+            model.addAttribute("phone", rqPhone);
+            model.addAttribute("main", rqMail);
+        }
+        return "cliente"; */
+
 
     @PostMapping("/returnMain")
     public String redirectIndex() {
         return "redirect:/";
     }
 
+
     public boolean validateInputCli(String action, String cpf, String name, String address, String phone, String mail) {
+
+        // função para validar se os inputs foram digitados
+        boolean validInputAll = cpf != null && !cpf.isEmpty() &&
+                name != null && !name.isEmpty() &&
+                address != null && !address.isEmpty() &&
+                phone != null && !phone.isEmpty() &&
+                mail != null && !mail.isEmpty();
+
+        // função para validar se o cpf foi digitado
+        boolean validInputCPF = cpf != null && !cpf.isEmpty();
+
         switch(action) {
             case "remove":
-                return cpf != null && !cpf.isEmpty();
+                return validInputCPF;
             case "update":
-                return cpf != null && !cpf.isEmpty() &&
-                    name != null && !name.isEmpty() &&
-                    address != null && !address.isEmpty() &&
-                    phone != null && !phone.isEmpty() &&
-                    mail != null && !mail.isEmpty();
-            case "submit":
-                return cpf != null && !cpf.isEmpty() &&
-                    name != null && !name.isEmpty() &&
-                    address != null && !address.isEmpty() &&
-                    phone != null && !phone.isEmpty() &&
-                    mail != null && !mail.isEmpty();
+                return validInputAll;
+            case "insert":
+                return validInputAll;
             case "consult":
-                return cpf != null && !cpf.isEmpty();
+                return validInputCPF;
             default:
                 return false;
         }
+    }
+
+
+    private void removeClient() {
+        System.out.println("Função delete cliente");
+    }
+
+    private void updateClient() {
+        System.out.println("função update Cliente");
+    }
+
+    private void insertClient() {
+        System.out.println("Função insert cliente");
+    }
+
+    private int[] consultClient() {
+        System.out.println("Função consult cliente");
+        int[] arr = {0, 1};
+
+        return arr;
     }
 }
 

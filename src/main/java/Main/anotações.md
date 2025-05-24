@@ -16,6 +16,13 @@ solicitação de compra (a03_codigo)
     vai ter que inserir quantia manualmente no banco de dados, pra cada item.
     DAO - estoque -= input(quantia na vitrine)
 
+---
+
+new comments:
+
+persistencia_cliente - line: 70/79, 96/132
+
+---
 
 ## Lincar erro ao não preencher os campos dos dados de clientes
 ## Arrumar o link das imagens

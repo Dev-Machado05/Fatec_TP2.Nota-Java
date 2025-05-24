@@ -67,16 +67,16 @@ public class Persistencia_Cliente {
         objPrepared.setString(1, cpf);
         objResultSet = objPrepared.executeQuery();
         
-        if (objResultSet.next()) {
-            cliente = new Model_Cliente();
-            cliente.setA01_codigo(objResultSet.getInt("a01_codigo"));
-            cliente.setA01_nome(objResultSet.getString("a01_nome"));
-            cliente.setA01_endereco(objResultSet.getString("a01_endereco"));
-            cliente.setA01_telefone(objResultSet.getString("a01_telefone"));
-            cliente.setA01_cpf(objResultSet.getString("a01_cpf"));
-            cliente.setA01_credito(objResultSet.getFloat("a01_credito"));
-
-        }
+        //if (objResultSet.next()) {
+        //    cliente = new Model_Cliente();
+        //    cliente.setA01_codigo(objResultSet.getInt("a01_codigo"));
+        //    cliente.setA01_nome(objResultSet.getString("a01_nome"));
+        //    cliente.setA01_endereco(objResultSet.getString("a01_endereco"));
+        //    cliente.setA01_telefone(objResultSet.getString("a01_telefone"));
+        //    cliente.setA01_cpf(objResultSet.getString("a01_cpf"));
+        //    cliente.setA01_credito(objResultSet.getFloat("a01_credito"));
+//
+        //}
 
     } catch (SQLException e) {
         e.printStackTrace();
@@ -93,7 +93,7 @@ public class Persistencia_Cliente {
 
    }
 
-   public List<Model_Cliente> listarClientes() {
+   /*public List<Model_Cliente> listarClientes() {
     List<Model_Cliente> listaClientes = new ArrayList<>();
     try {
         String sql = "SELECT * FROM CLIENTE_01";
@@ -113,7 +113,7 @@ public class Persistencia_Cliente {
         }
 
     } catch (SQLException e) {
-        e.printStrackTrace();
+        e.printStackTrace();
 
     } finally {
         try {
@@ -121,7 +121,7 @@ public class Persistencia_Cliente {
             if (objPrepared != null) objPrepared.close();
 
         } catch (SQLException e) {
-            e.printStrackTrace();
+            e.printStackTrace();
 
         }
         objConectar.desconectar();
@@ -129,6 +129,6 @@ public class Persistencia_Cliente {
     }
     return listaClientes;
     
-   }
+   }*/
 
 }

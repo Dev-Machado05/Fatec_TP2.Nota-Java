@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout</title>
-  <!-- <link rel="stylesheet" th:href="@{/css/carrinho.css}"> -->
-  <link rel="stylesheet" href="../static/css/carrinho.css">
+  <link rel="stylesheet" th:href="@{/css/carrinho.css}">
+  <!--<link rel="stylesheet" href="../static/css/carrinho.css">-->
 </head>
 <body>
   <header>
@@ -81,7 +81,7 @@
         <span>Impostos</span><span>R$ 8,25</span>
       </div>
       <div class="summary-total">
-        <span>Total</span><span>R$ 113,24</span>
+        <span>Total</span><span>R$ <span th:text="${#numbers.formatDecimal(totalValue, 1, 2)}"></span></span>
       </div>
        <button class="primary">Comprar</button>
     </aside>
