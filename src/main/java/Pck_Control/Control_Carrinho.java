@@ -11,6 +11,4 @@ public class Control_Carrinho {
     public String controlCarrinho() {
         return "carrinho";
     }
-
-
 }

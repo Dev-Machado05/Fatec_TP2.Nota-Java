@@ -12,7 +12,7 @@ public class DAO_Main {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Driver
             conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/mvc_banco", "root", "");//URL | Login | Senha
         } catch (ClassNotFoundException | SQLException e) {
-           // e.printStackTrace();
+           e.printStackTrace();
         }
         return conexao;
     }
@@ -23,7 +23,7 @@ public class DAO_Main {
                 conexao.close();
             }
         } catch (SQLException e) {
-           // e.printStackTrace();
+           e.printStackTrace();
         }
     }
 }

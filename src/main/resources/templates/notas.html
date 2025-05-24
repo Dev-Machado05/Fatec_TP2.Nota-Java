@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notas Fiscais</title>
-  <link rel="stylesheet" href="../static/css/notas.css">
+  <link rel="stylesheet" th:href="@{/css/notas.css}">
+  <!-- <link rel="stylesheet" href="../static/css/notas.css"> -->
 </head>
 <body>
   <header>
@@ -38,12 +39,12 @@
           <p>data: <span th:text="data"></span></p>
         </div>
         <div class="container-nota-produto-info">
-          <p>Codigo Item: <span th:text=""></span></p>
-          <p>Codigo Produto: <span th:text=""></span></p>
-          <p>Nome Produto: <span th:text=""></span></p>
-          <p>Quantidade: <span th:text=""></span></p>
-          <p>Valor Unitario: <span th:text=""></span></p>
-          <p>Valor Item: <span th:text=""></span></p>
+          <p>Codigo Item: <span th:text="codItem"></span></p>
+          <p>Codigo Produto: <span th:text="codProd"></span></p>
+          <p>Nome Produto: <span th:text="nomeProd"></span></p>
+          <p>Quantidade: <span th:text="quantia"></span></p>
+          <p>Valor Unitario: <span th:text="valUni"></span></p>
+          <p>Valor Item: <span th:text="valItem"></span></p>
         </div>  
       </div>
       <div class="container-nota">
@@ -53,12 +54,12 @@
           <p>data: <span th:text="data"></span></p>
         </div>
         <div class="container-nota-produto-info">
-          <p>Codigo Item: <span th:text=""></span></p>
-          <p>Codigo Produto: <span th:text=""></span></p>
-          <p>Nome Produto: <span th:text=""></span></p>
-          <p>Quantidade: <span th:text=""></span></p>
-          <p>Valor Unitario: <span th:text=""></span></p>
-          <p>Valor Item: <span th:text=""></span></p>
+          <p>Codigo Item: <span th:text="codItem"></span></p>
+          <p>Codigo Produto: <span th:text="codProd"></span></p>
+          <p>Nome Produto: <span th:text="nomeProd"></span></p>
+          <p>Quantidade: <span th:text="quantia"></span></p>
+          <p>Valor Unitario: <span th:text="valUni"></span></p>
+          <p>Valor Item: <span th:text="valItem"></span></p>
         </div>  
       </div>
       <div class="container-nota">
@@ -68,14 +69,14 @@
           <p>data: <span th:text="data"></span></p>
         </div>
         <div class="container-nota-produto-info">
-          <p>Codigo Item: <span th:text=""></span></p>
-          <p>Codigo Produto: <span th:text=""></span></p>
-          <p>Nome Produto: <span th:text=""></span></p>
-          <p>Quantidade: <span th:text=""></span></p>
-          <p>Valor Unitario: <span th:text=""></span></p>
-          <p>Valor Item: <span th:text=""></span></p>
+          <p>Codigo Item: <span th:text="codItem"></span></p>
+          <p>Codigo Produto: <span th:text="codProd"></span></p>
+          <p>Nome Produto: <span th:text="nomeProd"></span></p>
+          <p>Quantidade: <span th:text="quantia"></span></p>
+          <p>Valor Unitario: <span th:text="valUni"></span></p>
+          <p>Valor Item: <span th:text="valItem"></span></p>
         </div>  
-      </div>      
+      </div>
     </div>
   </main>
 </body>

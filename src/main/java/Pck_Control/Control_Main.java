@@ -13,19 +13,19 @@ public class Control_Main {
     }
 
     @PostMapping("/pagCliente")
-    public String RedirectClient() {
+    public String redirectClient() {
         // local para implementação de lógica
         return "redirect:/cliente";
     }
 
     @PostMapping("/pagCarrinho")
-    public String RedirectCarrinho() {
+    public String redirectCarrinho() {
         // local para implementação de lógica
         return "redirect:/carrinho";
     }
 
     @PostMapping("/pagVitrine")
-    public String RedirectVitrine() {
+    public String redirectVitrine() {
         // local para implementação de lógica
         return "redirect:/vitrine";
     }

@@ -22,3 +22,4 @@ solicitação de compra (a03_codigo)
 ## linkar a pagina das notas
 ## adicionar itens ao carrinho e adicionar a nota fiscal
 ## arrumar persistencia
+## Possivel erro: linha 15 SQL A01_codigo

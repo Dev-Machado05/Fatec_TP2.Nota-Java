@@ -6,6 +6,7 @@ public class Model_Pedido {
 	private String 	a02_data;
 	private float 	a02_valorTotal;
 	private int 	a01_codigo_fk; // User code EX:0001
+	//Import model_cliente?
 	
 	public Model_Pedido(float a02_valorTotal, int a01_codigo_fk) {
 		super();

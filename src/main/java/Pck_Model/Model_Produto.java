@@ -2,7 +2,7 @@ package Pck_Model;
 
 public class Model_Produto {
 	
-	private int	a03_codigo;
+	private int		a03_codigo;
 	private String	a03_nome;
 	private float	a03_valorUnitario;
 	private int		a03_estoque;
@@ -30,7 +30,7 @@ public class Model_Produto {
 	}
 
 	public void setA03_codigo(int a03_codigo) {
-		if (a03_codigo != null && a03_codigo.length() <= 12)
+
 		this.a03_codigo = a03_codigo;
 	}
 	

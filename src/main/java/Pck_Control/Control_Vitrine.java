@@ -21,7 +21,7 @@ public class Control_Vitrine {
     }
 
 
-    public void requisitarProduto() {
+    /*public void requisitarProduto() {
       try {
         model.setA03_codigo(a03_codigo);
         model.setA03_nome(a03_nome);
@@ -32,7 +32,7 @@ public class Control_Vitrine {
       } catch (Exception ex) {
           view.mostrarMensagem("Erro ao inserir produto ao carrinho. " + ex.getMessage());
       }
-    }
+    }*/
 
 /*
     quantia que ta no input
