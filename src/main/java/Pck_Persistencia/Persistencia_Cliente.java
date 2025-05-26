@@ -22,7 +22,7 @@ public class Persistencia_Cliente {
            objCall.setString(2, objModel_Cliente.getA01_endereco());
            objCall.setString(3, objModel_Cliente.getA01_telefone());
            objCall.setString(4, objModel_Cliente.getA01_cpf());
-           objCall.setFloat(5, objModel_Cliente.getA01_credito());
+           objCall.setString(5, objModel_Cliente.getA01_email());
            objCall.execute();
        } catch (SQLException e) {
            e.printStackTrace();
@@ -38,7 +38,7 @@ public class Persistencia_Cliente {
            objCall.setString(3, objModel_Cliente.getA01_endereco());
            objCall.setString(4, objModel_Cliente.getA01_telefone());
            objCall.setString(5, objModel_Cliente.getA01_cpf());
-           objCall.setFloat(6, objModel_Cliente.getA01_credito());
+           objCall.setString(6, objModel_Cliente.getA01_email());
            objCall.execute();
        } catch (SQLException e) {
            e.printStackTrace();
@@ -109,7 +109,7 @@ public class Persistencia_Cliente {
             cliente.setA01_cpf(objResultSet.getString("a01_cpf"));
             cliente.setA01_credito(objResultSet.getFloat("a01_credito"));
             listaClientes.add(cliente);
-
+z
         }
 
     } catch (SQLException e) {

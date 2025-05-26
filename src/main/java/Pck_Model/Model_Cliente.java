@@ -7,16 +7,16 @@ public class Model_Cliente {
     private String	a01_endereco;
     private String	a01_telefone;
     private String	a01_cpf;
-    private float	a01_credito;
+    private String	a01_email;
 
-    public Model_Cliente(String cliente_nome, String cliente_endereco, String cliente_telefone, String cliente_cpf, Float cliente_credito) {
-
-        this.setA01_nome(cliente_nome);
-        this.setA01_endereco(cliente_endereco);
-        this.setA01_telefone(cliente_telefone);
-        this.setA01_cpf(cliente_cpf);
-        this.setA01_credito(cliente_credito);
+    public Model_Cliente(String a01_nome, String a01_endereco, String a01_cpf, String a01_telefone, String a01_email) {
+        this.setA01_nome(a01_nome);
+        this.setA01_endereco(a01_endereco);
+        this.setA01_cpf(a01_cpf);
+        this.setA01_telefone(a01_telefone);
+        this.setA01_email(a01_email);
     }
+
 
     public int getA01_codigo() {
         return a01_codigo;
@@ -34,8 +34,8 @@ public class Model_Cliente {
     public String getA01_cpf() {
         return a01_cpf;
     }
-    public float getA01_credito() {
-        return a01_credito;
+    public String getA01_email() {
+        return a01_email;
     }
 
 
@@ -62,7 +62,7 @@ public class Model_Cliente {
             this.a01_cpf = a01_cpf;
         }
     }
-    public void setA01_credito(float a01_credito) {
-        this.a01_credito = a01_credito;
+    public void setA01_email(String a01_email) {
+        this.a01_email = a01_email;
     }
 }

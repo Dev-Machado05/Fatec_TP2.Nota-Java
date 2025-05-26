@@ -1,4 +1,4 @@
-package Main;
+package main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +9,7 @@ import java.net.URI;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "Pck_Control")
-public class Main {
+public class main {
     public static void main(String[] args) {
         if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
             try {
@@ -18,13 +18,6 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(main.class, args);
     }
 }
-
-// padrão nomeclatura:
-
-// - Funções: <função><alvo> exemplo: controlCLiente, redirectCliente
-
-// as variaveis e funções devem ter seu inicio com letras minuscular e em caso de
-// nome composto ter a letra inicial das demais palavras maiuscula.

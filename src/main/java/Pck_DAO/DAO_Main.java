@@ -6,15 +6,17 @@ import java.sql.SQLException;
 
 public class DAO_Main {
     private Connection conexao;
+    private final String url = "jdbc:mysql://localhost:3306/notetp2";
+    private final String user = "root";
+    private final String password = "2511";
 
     public Connection getConexao() {
         try {// para MySQL 8+
             Class.forName("com.mysql.cj.jdbc.Driver"); // Driver
-            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/mvc_banco", "root", "");//URL | Login | Senha
+            return DriverManager.getConnection(url, user, password);//URL | Login | Senha
         } catch (ClassNotFoundException | SQLException e) {
-           e.printStackTrace();
+            throw new RuntimeException("Falha ao conectar ao banco de dados: " + e.getMessage(), e);
         }
-        return conexao;
     }
 
     public void desconectar() {
@@ -23,7 +25,7 @@ public class DAO_Main {
                 conexao.close();
             }
         } catch (SQLException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
     }
 }

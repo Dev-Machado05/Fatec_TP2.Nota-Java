@@ -52,32 +52,31 @@
             <table>
                 <thead>
                     <tr>
+                        <th>CPF</th>
                         <th>Nome</th>
-                        <th>Idade</th>
-                        <th>Profissão</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
                         <th>Endereço</th>
-                        <th>Numero</th>
-                        <th>Profissão</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="client : ${clientList}">
                         <td th:text="${client.cpf}"></td>
                         <td th:text="${client.name}"></td>
-                        <td th:text="${client.address}"></td>
-                        <td th:text="${client.phone}"></td>
                         <td th:text="${client.mail}"></td>
+                        <td th:text="${client.phone}"></td>
+                        <td th:text="${client.address}"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </main>
     <script th:inline="javascript">
-        if (/*[[${sucessMsg}]]*/ false) {
-            alert("Cliente Registrado");
+        if (/*[[${sucessMsg}]]*/ null != null) {
+            alert(/*[[${sucessMsg}]]*/);
         }
-        if (/*[[${erroMsg}]]*/ false) {
-            alert("Preencha todos os campos");
+        if (/*[[${erroMsg}]]*/ null != null) {
+            alert(/*[[${erroMsg}]]*/);
         }
     </script>
 
